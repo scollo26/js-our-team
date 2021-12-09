@@ -53,13 +53,13 @@ function printCards(array, container) {
   
         const templateDiv = `
         <div class="team-card">
-            <div class="card-image">
-                <img src="img/${obj.image}" alt="${obj.name}"/>
-            </div>
-            <div class="card-text">
-                <h3>${obj.name}</h3>
-                <p>${obj.role}</p>
-            </div>
+          <div class="card-image">
+            <img src="img/${obj.image}" alt="${obj.name}"/>
+          </div>
+          <div class="card-text">
+            <h3>${obj.name}</h3>
+            <p>${obj.role}</p>
+          </div>
         </div>`;
   
         container.innerHTML += templateDiv;
