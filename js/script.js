@@ -42,51 +42,92 @@ const team = [
     },
 ];
 
-
-
-
-
-
-
-
-
-
-
-
 const teamContainer = document.querySelector('.team-container');
 
 
-
+// funzione inserimento card
 
 function printCards(array, container) {
-    container.innerHTML = '';
     for (let i = 0; i < array.length; i++) {
       const obj = array[i];
   
-    const templateDiv = `
-    <div class="team-card">
-        <div class="card-image">
-            <img
-            src="img/${obj.image}"
-            alt="Wayne Barnett"/>
-        </div>
-        <div class="card-text">
-            <h3>${obj.name}</h3>
-            <p>${obj.role}</p>
-        </div>
-    </div>`;
+        const templateDiv = `
+        <div class="team-card">
+            <div class="card-image">
+                <img src="img/${obj.image}" alt="${obj.name}"/>
+            </div>
+            <div class="card-text">
+                <h3>${obj.name}</h3>
+                <p>${obj.role}</p>
+            </div>
+        </div>`;
   
-      container.innerHTML += templateDiv;
-      console.log();templateDiv
+        container.innerHTML += templateDiv;
+        //console.log(templateDiv);
     }
 }
 
 
-
+// stampo in html tutte le foto
 printCards(team, teamContainer);
 
 
 
+// dichiarazione variabili input bottone
+let inputname = document.getElementById('name');
+let inputrole = document.getElementById('role');
+let inputimage = document.getElementById('image');
+let inputbutton = document.getElementById('addMemberButton');
 
 
+// inserimento di nuova card con button
+inputbutton.addEventListener('click', function(){
+    
+
+
+    
+
+    // let newname = inputname.value;
+    // let newrole = inputname.value;
+    // let newimage = inputimage.value; 
+
+
+    // array ad oggetti
+    let obj ={
+
+    // name: newname,
+    // role: newrole,
+    // image: newimage,
+
+    name: inputname.value,
+    role: inputrole.value,
+    image: inputimage.value,
+    
+};
+
+// azzero input dopo inserimento img
+
+inputname.value ='';
+inputrole.value ='';
+inputimage.value ='';
+
+// push nuovo array oggetti dentro il primo array
+
+team.push(obj);
+
+// ripulisco html da tutte le foto
+teamContainer.innerHTML = '';
+
+
+// stampo in html tutte le foto piu la nuova foto 
+printCards(team, teamContainer);
+
+});
+
+
+
+
+
+
+// new-team-member-04.jpg
 
