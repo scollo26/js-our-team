@@ -103,24 +103,24 @@ inputbutton.addEventListener('click', function(){
     role: inputrole.value,
     image: inputimage.value,
     
-};
+    };
 
-// azzero input dopo inserimento img
+    // azzero input dopo inserimento img
 
-inputname.value ='';
-inputrole.value ='';
-inputimage.value ='';
+    inputname.value ='';
+    inputrole.value ='';
+    inputimage.value ='';
 
-// push nuovo array oggetti dentro il primo array
+    // push nuovo array oggetti dentro il primo array
 
-team.push(obj);
+    team.push(obj);
 
-// ripulisco html da tutte le foto
-teamContainer.innerHTML = '';
+    // ripulisco html da tutte le foto
+    teamContainer.innerHTML = '';
 
 
-// stampo in html tutte le foto piu la nuova foto 
-printCards(team, teamContainer);
+    // stampo in html tutte le foto piu la nuova foto 
+    printCards(team, teamContainer);
 
 });
 
