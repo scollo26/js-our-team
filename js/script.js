@@ -40,4 +40,53 @@ const team = [
       role: 'Graphic Designer',
       image: 'barbara-ramos-graphic-designer.jpg',
     },
-  ];
+];
+
+
+
+
+
+
+
+
+
+
+
+
+const teamContainer = document.querySelector('.team-container');
+
+
+
+
+function printCards(array, container) {
+    container.innerHTML = '';
+    for (let i = 0; i < array.length; i++) {
+      const obj = array[i];
+  
+    const templateDiv = `
+    <div class="team-card">
+        <div class="card-image">
+            <img
+            src="img/${obj.image}"
+            alt="Wayne Barnett"/>
+        </div>
+        <div class="card-text">
+            <h3>${obj.name}</h3>
+            <p>${obj.role}</p>
+        </div>
+    </div>`;
+  
+      container.innerHTML += templateDiv;
+      console.log();templateDiv
+    }
+}
+
+
+
+printCards(team, teamContainer);
+
+
+
+
+
+
