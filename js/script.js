@@ -51,19 +51,19 @@ function printCards(array, container) {
     for (let i = 0; i < array.length; i++) {
       const obj = array[i];
   
-        const templateDiv = `
-        <div class="team-card">
-          <div class="card-image">
-            <img src="img/${obj.image}" alt="${obj.name}"/>
-          </div>
-          <div class="card-text">
-            <h3>${obj.name}</h3>
-            <p>${obj.role}</p>
-          </div>
-        </div>`;
+      const templateDiv = `
+      <div class="team-card">
+        <div class="card-image">
+          <img src="img/${obj.image}" alt="${obj.name}"/>
+        </div>
+        <div class="card-text">
+          <h3>${obj.name}</h3>
+          <p>${obj.role}</p>
+        </div>
+      </div>`;
   
-        container.innerHTML += templateDiv;
-        //console.log(templateDiv);
+      container.innerHTML += templateDiv;
+      //console.log(templateDiv);
     }
 }
 
